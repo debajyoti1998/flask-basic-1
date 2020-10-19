@@ -1,0 +1,38 @@
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  background-color: rgb(238, 9, 150);
+}
+</style>
+</head>
+<body>
+
+<h1>Table with Collapsed Borders</h1>
+
+<table>
+  <tr>
+    <th>user id</th>
+    <th>user product_name</th>
+    <th>user product_price</th>
+    <th>user stock</th>
+    <th>user product_status</th>
+  </tr>
+  
+    {% for a in data %}
+        <tr>
+            <td>{{ a['id']}}</td>
+            <td>{{ a['product_name']}}</td>
+            <td>{{ a['product_price']}}</td>
+            <td>{{ a['stock']}}</td>
+            <td>{{ a['product_status']}}</td>
+        </tr>
+    {% endfor %}
+  
+</table>
+
+</body>
+</html>
+
